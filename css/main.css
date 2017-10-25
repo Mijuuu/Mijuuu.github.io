@@ -293,13 +293,20 @@ textarea {
 /*Henry's css*/
 /*body*/
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #636363;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #b0b0b0;
 }
 
-/*logo*/
+/*header*/
 .logo{
     margin: 1%;
+}
+
+.link{
+    position: absolute;
+    z-index: 1;
+    left: 310px;
+    top: 150px;
 }
 
 /*table*/
@@ -311,26 +318,38 @@ table{
 }
 
 table, td{
-    border: 1px solid black;
+    border: 3px solid #141414;
 }
 
 td{
     text-align: center;
-    width: 12.5%;
-    background-color: #454545;
+    background-color: #0064ff;
 }
 
 .rowTitle{
     font-weight: bold;
-    background-color: #CF7336;
+    background-color: #000aff;
+}
+
+.input{
+    box-sizing: border-box;
+    border: 3px solid #141414;
+    border-radius: 5px;
 }
 
 /*button*/
-.wrapper{
+.button{
+    background-color: #000aff;
+    border: none;
+    padding: 15px 32px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
 }
 
-.mixButton{
-    width: 10%;
-    margin-top: 20px;
+.buttonWrapper{
+    text-align: center;
 }
