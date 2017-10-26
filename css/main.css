@@ -290,66 +290,21 @@ textarea {
     }
 }
 
-/*Henry's css*/
-/*body*/
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #b0b0b0;
+/*my css*/
+#mixme_btn{
+    margin-bottom: 50px;
 }
 
-/*header*/
-.logo{
-    margin: 1%;
+.tableCell{
+    height: 60px;
 }
 
-.link{
-    position: absolute;
-    z-index: 1;
-    left: 310px;
-    top: 150px;
+#mixTable td{
+    text-align: center; 
+    vertical-align: middle;
 }
 
-/*table*/
-table{
-    border-collapse: collapse;
-    height: 100px;
-    width: 90%;
-    margin-top: 20px;
-}
-
-table, td{
-    border: 3px solid #141414;
-}
-
-td{
-    text-align: center;
-    background-color: #0064ff;
-}
-
-.rowTitle{
-    font-weight: bold;
-    background-color: #000aff;
-}
-
-.input{
-    box-sizing: border-box;
-    border: 3px solid #141414;
-    border-radius: 5px;
-}
-
-/*button*/
-.button{
-    background-color: #000aff;
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 5px;
-    cursor: pointer;
-}
-
-.buttonWrapper{
-    text-align: center;
+#mixTable th{
+    text-align: center; 
+    vertical-align: middle;
 }

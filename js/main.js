@@ -1,5 +1,5 @@
-//Henry's javascript
-var classes = ["Pocket Scout", "Aggressive Scout", "Roaming Soldier", "Pocket Soldier", "Demoman", "Medic"];
+//my javascript
+var classes = ["Scout", "Scout", "Roaming Soldier", "Pocket Soldier", "Demoman", "Medic"];
 
 function shuffle(array){
     let counter = array.length;
