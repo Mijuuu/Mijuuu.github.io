@@ -38,9 +38,29 @@
 
         <!--my HTML-->
         <!--Navigationbar-->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="#">mixme.tf</a>
+                <a class="navbar-brand" href="#">Miju's Github Page</a>
+                <ul class="navbar-nav mr-auto">
+                    <div class="row">
+                        <li class="nav-item" id="mixmetf_top_btn">
+                          <a class="nav-link" href="#">mixme.tf</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Empty</a>
+                        </li>
+                    </div>
+                </ul>
+                <span class="nav-item dropdown" id="link_dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Links
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Twitter</a>
+                        <a class="dropdown-item" href="#">Steam</a>
+                        <a class="dropdown-item" href="#">GitHub</a>
+                    </div>
+                </span>
             </div>
         </nav>
 
@@ -66,7 +86,7 @@
             <table class="table table-bordered" id="mixTable">
                 <tbody>
                     <tr>
-                        <th class="tableCell">Name</th>
+                        <th class="tableCell">Names</th>
                         <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name0"></td>
                         <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name1"></td>
                         <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name2"></td>
