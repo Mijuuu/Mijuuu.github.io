@@ -64,29 +64,74 @@
             </div>
         </nav>
 
-        <!--stuff here-->
+        <!--Text and Selectboxes-->
         <div class="jumbotron">
             <div class="container">
-                <h1>Welcome!</h1>
-                <p class="lead">my name is jeff alot please aaaa yes no maybe cool test text aurhorn lol haha roofl meme meme meme xaxaxaxaxa gucci gang gucci gang gucci gang gucci gang</p>
+                <h1>Welcome to mixme.tf!</h1>
+                <p>Enter the names of your players in the table below and hit 'MIX ME!' to randomly assign classes. Use the Copy Box below to copy the names with their randomly assigned classes.</p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <button type="button" onclick="location.href='https://discord.gg/3RutU9c';" class="btn btn-lg btn-default btn-block" id="discord_btn">Find an enemy team »</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="button" onclick="location.href='https://serveme.tf/';" class="btn btn-lg btn-default btn-block" id="serveme_btn">Get a gameserver »</button>
+                    </div>
+                </div>
             </div>
         </div>
-            
-            <!-- Example row of columns -->
+
+        <!--Table-->
         <div class="container">
+            <table class="table table-bordered" id="mixTable">
+                <tbody>
+                    <tr>
+                        <th class="tableCell">Names</th>
+                        <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name0"></td>
+                        <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name1"></td>
+                        <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name2"></td>
+                        <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name3"></td>
+                        <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name4"></td>
+                        <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name5"></td>
+                    </tr>
+                    <tr>
+                        <th class="tableCell">Classes</th>
+                        <td class="tableCell" id="class0"></td>
+                        <td class="tableCell" id="class1"></td>
+                        <td class="tableCell" id="class2"></td>
+                        <td class="tableCell" id="class3"></td>
+                        <td class="tableCell" id="class4"></td>
+                        <td class="tableCell" id="class5"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button type="button" onclick="mix()" class="btn btn-lg btn-outline-info btn-block" id="mixme_btn">Mix me!</button>
+
+            <!--copy box and bottom right buttons-->
             <div class="row">
-                <div class="col-lg-6">
-                    <h2>mixme.tf</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <div class="card col-sm-6">
+                    <div class="card-body">
+                        <h4 class="card-title">Copy Box</h4>
+                        <p class="card-text">
+                            name0 will be playing class4.<br/>
+                            name0 will be playing class4.<br/>
+                            name0 will be playing class4.<br/>
+                            name0 will be playing class4.<br/>
+                            name0 will be playing class4.<br/>
+                            name0 will be playing class4.
+                        </p>
+                        <p class="card-text">Powered by mixme.tf on https://mijuuu.github.io/ .</p>
+                        <button type="button" onclick="" class="btn btn-info" id="copy_btn">Copy Text</button>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <h2>empty</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <div class="col-sm-6">
+                    <button type="button" onclick="location.href='http://www.teamfortress.tv/44226/mixme-tf-not-a-real-domain';" class="btn btn-outline-info btn-block" id="tftv_btn">TF.TV Thread »</button>
+                    <button type="button" onclick="" class="btn btn-outline-info btn-block" id="share_btn">Share »</button>
                 </div>
             </div>
-    
+
             <hr>
-    
+
             <!--footnote-->
             <footer>
                 <small>by Henry 'Miju' Wulff</small>
