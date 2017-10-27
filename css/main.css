@@ -291,26 +291,6 @@ textarea {
 }
 
 /*my css*/
-/*mixme css*/
-#mixme_btn{
-    margin-bottom: 50px;
-}
-
-.tableCell{
-    height: 60px;
-}
-
-#mixTable td{
-    text-align: center; 
-    vertical-align: middle;
-}
-
-#mixTable th{
-    text-align: center; 
-    vertical-align: middle;
-}
-
-/*general css*/
 #mixmetf_top_btn{
     margin-left: 20px;
 }

@@ -1,4 +1,3 @@
-//my javascript
 var classes = ["Scout", "Scout", "Roaming Soldier", "Pocket Soldier", "Demoman", "Medic"];
 
 function shuffle(array){
