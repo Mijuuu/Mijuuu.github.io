@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>mixme</title>
+        <title>mixme.tf</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -54,7 +54,7 @@
                 </ul>
                 <span class="nav-item dropdown" id="link_dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Links
+                        Follow me
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="https://twitter.com/MijuLikesCats">Twitter</a>
@@ -87,12 +87,12 @@
                 <tbody>
                     <tr>
                         <th class="tableCell">Names</th>
-                        <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name0"></td>
-                        <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name1"></td>
-                        <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name2"></td>
-                        <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name3"></td>
-                        <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name4"></td>
-                        <td class="tableCell"><input type="text" class="form-control" placeholder="Enter name here" id="name5"></td>
+                        <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="name0" required></td>
+                        <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="name1" required></td>
+                        <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="name2" required></td>
+                        <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="name3" required></td>
+                        <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="name4" required></td>
+                        <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="name5" required></td>
                     </tr>
                     <tr>
                         <th class="tableCell">Classes</th>
@@ -106,7 +106,7 @@
                 </tbody>
             </table>
 
-            <button type="button" onclick="mix()" class="btn btn-lg btn-outline-info btn-block" id="mixme_btn">Mix me!</button>
+            <button type="button" onclick="mix()" class="btn btn-lg btn-outline-primary btn-block" id="mixme_btn">Mix me!</button>
 
             <!--copy box and bottom right buttons-->
             <div class="row">
@@ -114,13 +114,13 @@
                     <div class="card-body">
                         <h4 class="card-title">Copy Box</h4>
                         <p class="card-text" id="copyContent">
-                            
+                            <!--This is where the content to copy goes-->
                         </p>
-                        <p class="card-text">Powered by mixme.tf on https://mijuuu.github.io/ .</p>
+                        <p class="card-text">Powered by mixme.tf on mijuuu.github.io .</p>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <button type="button" onclick="location.href='http://www.teamfortress.tv/44226/mixme-tf-not-a-real-domain';" class="btn btn-outline-info btn-block" id="tftv_btn">TF.TV Thread »</button>
+                    <button type="button" onclick="location.href='http://www.teamfortress.tv/44226/mixme-tf-not-a-real-domain';" class="btn btn-outline-primary btn-block" id="tftv_btn">teamfortress.tv Thread »</button>
                 </div>
             </div>
 
