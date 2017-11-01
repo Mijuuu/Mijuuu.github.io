@@ -26,6 +26,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/mixme.js"></script>
+        <script src="js/html2canvas.js"></script>
 
 
         <!--Implementation of Material Design for Bootstrap-->
@@ -45,7 +46,7 @@
                 <ul class="navbar-nav mr-auto">
                     <div class="row">
                         <li class="nav-item" id="mixmetf_top_btn">
-                          <a class="nav-link" href="mixme.php">mixme.tf</a>
+                          <a class="nav-link" href="mixme.html">mixme.tf</a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="empty.html">Empty</a>
@@ -107,6 +108,21 @@
             </table>
 
             <button type="button" onclick="mix()" class="btn btn-lg btn-outline-primary btn-block" id="mixme_btn">Mix me!</button>
+            <div class="modal" id="notAllNamesEnteredModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Alert</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Please make sure that all six names are entered.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!--copy box and bottom right buttons-->
             <div class="row">
@@ -121,6 +137,22 @@
                 </div>
                 <div class="col-sm-6">
                     <button type="button" onclick="location.href='http://www.teamfortress.tv/44226/mixme-tf-not-a-real-domain';" class="btn btn-outline-primary btn-block" id="tftv_btn">teamfortress.tv Thread »</button>
+                    <button type="button" onclick="screenshotProof()" class="btn btn-outline-primary btn-block" id="getProof_btn">Get proof »</button>
+                    <div class="modal" id="tableNotFilledModal">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Alert</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Get the Table filled before getting proof of your result.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
