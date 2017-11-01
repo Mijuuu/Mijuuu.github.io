@@ -39,6 +39,6 @@ function mix(){
            name5 + ' will be playing ' + shuffledArray[5];
     }
     else{
-        alert("Make sure six names are entered.");
+        
     }
 }
