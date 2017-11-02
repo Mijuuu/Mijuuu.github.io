@@ -37,6 +37,8 @@ function mix(){
            name3 + ' will be playing ' + shuffledArray[3] + "<br/>" + 
            name4 + ' will be playing ' + shuffledArray[4] + "<br/>" + 
            name5 + ' will be playing ' + shuffledArray[5];
+
+        document.getElementById("timestamp").innerHTML = Date();
     }
     else{
         $('#notAllNamesEnteredModal').modal();
