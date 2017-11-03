@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -39,7 +39,7 @@
         <script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/js/bootstrap-material-design.js" integrity="sha384-hC7RwS0Uz+TOt6rNG8GX0xYCJ2EydZt1HeElNwQqW+3udRol4XwyBfISrNDgQcGA" crossorigin="anonymous"></script>
         <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
 
-        <!--my HTML-->
+
         <!--Navigationbar-->
         <nav class="navbar navbar-light bg-light">
             <div class="container">
@@ -67,11 +67,12 @@
             </div>
         </nav>
 
-        <!--Text and Selectboxes-->
+
+        <!--Jumbotron-->
         <div class="jumbotron">
             <div class="container">
                 <h1>mixme.tf</h1>
-                <p class="lead">Enter the names of your players in the table below and hit 'MIX ME!' to randomly assign classes. Use the Copy Box below to copy the names with their randomly assigned classes or click 'GET PROOF' to get a screenshot of the table.</p>
+                <p class="lead">Enter the names of your players in the table below and hit 'MIX ME!' to randomly assign classes. Use the Copy Box to copy the names with their randomly assigned classes or download a screenshotof the table.</p>
                 <div class="row">
                     <div class="col-sm-6">
                         <button type="button" onclick="location.href='https://discord.gg/3RutU9c';" class="btn btn-lg btn-default btn-block" id="discord_btn">Find an enemy team »</button>
@@ -83,7 +84,8 @@
             </div>
         </div>
 
-        <!--Table-->
+
+        <!--Table, Buttons, etc.-->
         <div class="container">
             <table class="table table-bordered" id="mixTable">
                 <tbody>
@@ -105,14 +107,41 @@
                         <td class="tableCell" id="class4"></td>
                         <td class="tableCell" id="class5"></td>
                     </tr>
-                    <tr>
-                        <th class="tableCell">Timestamp</th>
-                        <td class="tableCell" id="timestamp" colspan="6"></td>
-                    </tr>
                 </tbody>
             </table>
 
             <button type="button" onclick="mix()" class="btn btn-lg btn-outline-primary btn-block" id="mixme_btn">Mix me!</button>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <button type="button" onclick="openCopyModal()" class="btn btn-outline-primary btn-block" id="openCopyBox_btn">Open Copy Box »</button>
+                    <button type="button" onclick="screenshotProof()" class="btn btn-outline-primary btn-block" id="getProof_btn">Download Screenshot of Table »</button>
+                </div>
+
+                <div class="col-sm-6">
+                    <button type="button" onclick="location.href='http://www.teamfortress.tv/44226/mixme-tf-not-a-real-domain';" class="btn btn-outline-primary btn-block" id="tftv_btn">teamfortress.tv Thread »</button>
+                    <button type="button" onclick="location.href='https://github.com/Mijuuu/Mijuuu.github.io';" class="btn btn-outline-primary btn-block" id="mixmeOnGitHub_btn">mixme.tf on GitHub »</button>
+                </div>
+            </div>
+
+
+            <!--Modals-->
+            <div class="modal" id="tableNotFilledModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Alert</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Get the Table filled first.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="modal" id="notAllNamesEnteredModal">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -129,41 +158,28 @@
                 </div>
             </div>
 
-            <!--copy box and bottom right buttons-->
-            <div class="row">
-                <div class="card col-sm-6">
-                    <div class="card-body">
-                        <h4 class="card-title">Copy Box</h4>
-                        <p class="card-text" id="copyContent">
-                            <!--This is where the content to copy goes-->
-                        </p>
-                        <p class="card-text">Powered by mixme.tf on mijuuu.github.io .</p>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <button type="button" onclick="location.href='http://www.teamfortress.tv/44226/mixme-tf-not-a-real-domain';" class="btn btn-outline-primary btn-block" id="tftv_btn">teamfortress.tv Thread »</button>
-                    <button type="button" onclick="screenshotProof()" class="btn btn-outline-primary btn-block" id="getProof_btn">Get proof »</button>
-                    <div class="modal" id="tableNotFilledModal">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Alert</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Get the Table filled before getting proof of your result.</p>
-                                </div>
-                            </div>
+            <div class="modal" id="copyModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Copy Box</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <textarea id="copyText" cols="51" rows="10" readonly></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" onclick="copyToClipboard()" class="btn btn-primary">Copy</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <hr>
 
             <!--footnote-->
+            <hr>
             <footer>
                 <small>by Henry 'Miju' Wulff</small>
             </footer>
