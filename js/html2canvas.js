@@ -1,3 +1,5 @@
+//@ts-check
+
 /*
   html2canvas 0.5.0-beta3 <http://html2canvas.hertzen.com>
   Copyright (c) 2016 Niklas von Hertzen
@@ -3523,7 +3525,7 @@ function screenshotProof(){
     if(document.getElementById('class0').textContent !== ""){
         html2canvas(document.getElementById("mixTable"), {
             onrendered: function(canvas) {
-                saveAsPNG(canvas,"mixmeProof");
+                saveAsPNG(canvas,"mixmeScreenshot");
             },
             background: "#ffffff"
         });

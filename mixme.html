@@ -72,7 +72,7 @@
         <div class="jumbotron">
             <div class="container">
                 <h1>mixme.tf</h1>
-                <p class="lead">Enter the names of your players in the table below and hit 'MIX ME!' to randomly assign classes. Use the Copy Box to copy the names with their randomly assigned classes or download a screenshotof the table.</p>
+                <p class="lead">Enter the names of your players in the table below and hit 'MIX ME!' to randomly assign classes. Use the Copy Box to copy the names with their randomly assigned classes or download a screenshot of the table.</p>
                 <div class="row">
                     <div class="col-sm-6">
                         <button type="button" onclick="location.href='https://discord.gg/3RutU9c';" class="btn btn-lg btn-default btn-block" id="discord_btn">Find an enemy team »</button>
@@ -120,7 +120,7 @@
 
                 <div class="col-sm-6">
                     <button type="button" onclick="location.href='http://www.teamfortress.tv/44226/mixme-tf-not-a-real-domain';" class="btn btn-outline-primary btn-block" id="tftv_btn">teamfortress.tv Thread »</button>
-                    <button type="button" onclick="location.href='https://github.com/Mijuuu/Mijuuu.github.io';" class="btn btn-outline-primary btn-block" id="mixmeOnGitHub_btn">mixme.tf on GitHub »</button>
+                    <button type="button" onclick="fixingClassesModal()" class="btn btn-outline-primary btn-block" id="fixingClassesModal_btn">Fix classes »</button>
                 </div>
             </div>
 
@@ -132,7 +132,7 @@
                         <div class="modal-header">
                             <h5 class="modal-title">Alert</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
@@ -148,7 +148,7 @@
                         <div class="modal-header">
                             <h5 class="modal-title">Alert</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
@@ -164,7 +164,7 @@
                         <div class="modal-header">
                             <h5 class="modal-title">Copy Box</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
@@ -172,6 +172,36 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" onclick="copyToClipboard()" class="btn btn-primary">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="chooseClassModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Choose Class</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Choose a class to be fixed. The class will not change upon randomizing the classes.</p>
+                            <p>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <button type="button" class="btn btn-secondary" onclick="classChosen('Scout'); this.disabled=true;">Scout</button>
+                                        <button type="button" class="btn btn-secondary" onclick="classChosen('Roaming Soldier'); this.disabled=true;">Roaming Soldier</button>
+                                        <button type="button" class="btn btn-secondary" onclick="classChosen('Demoman'); this.disabled=true;">Demoman</button>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <button type="button" class="btn btn-secondary" onclick="classChosen('Scout'); this.disabled=true;">Scout</button>
+                                        <button type="button" class="btn btn-secondary" onclick="classChosen('Pocket Soldier'); this.disabled=true;">Pocket Soldier</button>
+                                        <button type="button" class="btn btn-secondary" onclick="classChosen('Medic'); this.disabled=true;">Medic</button>
+                                    </div>
+                                </div>
+                            </p>
                         </div>
                     </div>
                 </div>
