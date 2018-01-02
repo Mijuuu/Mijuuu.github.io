@@ -1,17 +1,37 @@
-#mixme_btn{
+#mixme_btn {
     margin-bottom: 50px;
 }
 
-.tableCell{
+.tableCell {
     height: 60px;
 }
 
-#mixTable td{
-    text-align: center; 
+.mixTable td {
+    text-align: center;
     vertical-align: middle;
 }
 
-#mixTable th{
-    text-align: center; 
+.mixTable th {
+    text-align: center;
     vertical-align: middle;
+}
+
+@media screen and (max-width:810px){
+    #content-desktop {
+        display: none;
+    }
+
+    #content-mobile {
+        display: inline;
+    }
+}
+
+@media screen and (min-width:811px){
+    #content-desktop {
+        display: inline;
+    }
+
+    #content-mobile {
+        display: none;
+    }
 }
