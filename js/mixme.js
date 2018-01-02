@@ -34,13 +34,14 @@ function openCopyModal(){
     if($(".class0").text().length){
         $('#copyModal').modal();
 
-        document.getElementById("copyText").innerHTML =
-        $(".name0").val() + ' will be playing ' + $(".class0").text() + "\r" +
-        $(".name1").val() + ' will be playing ' + $(".class1").text() + "\r" +
-        $(".name2").val() + ' will be playing ' + $(".class2").text() + "\r" +
-        $(".name3").val() + ' will be playing ' + $(".class3").text() + "\r" +
-        $(".name4").val() + ' will be playing ' + $(".class4").text() + "\r" +
-        $(".name5").val() + ' will be playing ' + $(".class5").text() + "\r\rBrought to you by mixme.tf on mijuuu.github.io";
+        $("#copyText").val(
+            $(".name0").val() + ' will be playing ' + $(".class0").text() + "\r" +
+            $(".name1").val() + ' will be playing ' + $(".class1").text() + "\r" +
+            $(".name2").val() + ' will be playing ' + $(".class2").text() + "\r" +
+            $(".name3").val() + ' will be playing ' + $(".class3").text() + "\r" +
+            $(".name4").val() + ' will be playing ' + $(".class4").text() + "\r" +
+            $(".name5").val() + ' will be playing ' + $(".class5").text() + "\r\rBrought to you by mixme.tf on mijuuu.github.io"
+        );
     }
     else{
         $('#tableNotFilledModal').modal();
@@ -48,7 +49,7 @@ function openCopyModal(){
 }
 
 function copyToClipboard(){
-    var copyText = document.getElementById("copyText");
+    var copyText = $("#copyText");
     copyText.select();
     document.execCommand("Copy");
 }
