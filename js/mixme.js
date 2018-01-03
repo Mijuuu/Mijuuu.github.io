@@ -14,33 +14,49 @@ function shuffle(array){
     return array;
 }
 
-function mix(){
-    if($(".name0").val() != ''){
+function d_mix(){
+    if($("#d_name0").val() && $("#d_name1").val() && $("#d_name2").val() && $("#d_name3").val() && $("#d_name4").val() && $("#d_name5").val()){
         var shuffledArray = shuffle(classes);
 
-        $(".class0").text(shuffledArray[0]);
-        $(".class1").text(shuffledArray[1]);
-        $(".class2").text(shuffledArray[2]);
-        $(".class3").text(shuffledArray[3]);
-        $(".class4").text(shuffledArray[4]);
-        $(".class5").text(shuffledArray[5]);
+        $("#d_class0").text(shuffledArray[0]);
+        $("#d_class1").text(shuffledArray[1]);
+        $("#d_class2").text(shuffledArray[2]);
+        $("#d_class3").text(shuffledArray[3]);
+        $("#d_class4").text(shuffledArray[4]);
+        $("#d_class5").text(shuffledArray[5]);
     }
     else{
         $('#notAllNamesEnteredModal').modal();
     }
 }
 
-function openCopyModal(){
-    if($(".class0").text().length){
+function m_mix(){
+    if($("#m_name0").val() && $("#m_name1").val() && $("#m_name2").val() && $("#m_name3").val() && $("#m_name4").val() && $("#m_name5").val()){
+        var shuffledArray = shuffle(classes);
+
+        $("#m_class0").text(shuffledArray[0]);
+        $("#m_class1").text(shuffledArray[1]);
+        $("#m_class2").text(shuffledArray[2]);
+        $("#m_class3").text(shuffledArray[3]);
+        $("#m_class4").text(shuffledArray[4]);
+        $("#m_class5").text(shuffledArray[5]);
+    }
+    else{
+        $('#notAllNamesEnteredModal').modal();
+    }
+}
+
+function d_openCopyModal(){
+    if($("#d_class0").text()){
         $('#copyModal').modal();
 
-        $("#copyText").val(
-            $(".name0").val() + ' will be playing ' + $(".class0").text() + "\r" +
-            $(".name1").val() + ' will be playing ' + $(".class1").text() + "\r" +
-            $(".name2").val() + ' will be playing ' + $(".class2").text() + "\r" +
-            $(".name3").val() + ' will be playing ' + $(".class3").text() + "\r" +
-            $(".name4").val() + ' will be playing ' + $(".class4").text() + "\r" +
-            $(".name5").val() + ' will be playing ' + $(".class5").text() + "\r\rBrought to you by mixme.tf on mijuuu.github.io"
+        $("#d_copyText").val(
+            $("#d_name0").val() + ' will be playing ' + $("#d_class0").text() + "\r" +
+            $("#d_name1").val() + ' will be playing ' + $("#d_class1").text() + "\r" +
+            $("#d_name2").val() + ' will be playing ' + $("#d_class2").text() + "\r" +
+            $("#d_name3").val() + ' will be playing ' + $("#d_class3").text() + "\r" +
+            $("#d_name4").val() + ' will be playing ' + $("#d_class4").text() + "\r" +
+            $("#d_name5").val() + ' will be playing ' + $("#d_class5").text() + "\r\rBrought to you by mixme.tf on mijuuu.github.io"
         );
     }
     else{
@@ -48,8 +64,32 @@ function openCopyModal(){
     }
 }
 
-function copyToClipboard(){
-    var copyText = $("#copyText");
+function m_openCopyModal(){
+    if($("#m_class0").text()){
+        $('#copyModal').modal();
+
+        $("#m_copyText").val(
+            $("#m_name0").val() + ' will be playing ' + $("#m_class0").text() + "\r" +
+            $("#m_name1").val() + ' will be playing ' + $("#m_class1").text() + "\r" +
+            $("#m_name2").val() + ' will be playing ' + $("#m_class2").text() + "\r" +
+            $("#m_name3").val() + ' will be playing ' + $("#m_class3").text() + "\r" +
+            $("#m_name4").val() + ' will be playing ' + $("#m_class4").text() + "\r" +
+            $("#m_name5").val() + ' will be playing ' + $("#m_class5").text() + "\r\rBrought to you by mixme.tf on mijuuu.github.io"
+        );
+    }
+    else{
+        $('#tableNotFilledModal').modal();
+    }
+}
+
+function d_copyToClipboard(){
+    var copyText = $("#d_copyText");
+    copyText.select();
+    document.execCommand("Copy");
+}
+
+function m_copyToClipboard(){
+    var copyText = $("#m_copyText");
     copyText.select();
     document.execCommand("Copy");
 }

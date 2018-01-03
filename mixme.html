@@ -87,75 +87,88 @@
 
         <!--Tables-->
         <div class="container">
-            <div id="content-desktop">
+            <div class="content-desktop">
                 <table class="table table-bordered mixTable">
                     <tbody>
                         <tr>
                             <th class="tableCell">Names</th>
-                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" class="name0" required/></td>
-                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" class="name1" required/></td>
-                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" class="name2" required/></td>
-                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" class="name3" required/></td>
-                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" class="name4" required/></td>
-                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" class="name5" required/></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="d_name0" required/></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="d_name1" required/></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="d_name2" required/></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="d_name3" required/></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="d_name4" required/></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="d_name5" required/></td>
                         </tr>
                         <tr>
                             <th class="tableCell">Classes</th>
-                            <td class="tableCell"><p class="class0"></p></td>
-                            <td class="tableCell"><p class="class1"></p></td>
-                            <td class="tableCell"><p class="class2"></p></td>
-                            <td class="tableCell"><p class="class3"></p></td>
-                            <td class="tableCell"><p class="class4"></p></td>
-                            <td class="tableCell"><p class="class5"></p></td>
+                            <td class="tableCell" id="d_class0"></td>
+                            <td class="tableCell" id="d_class1"></td>
+                            <td class="tableCell" id="d_class2"></td>
+                            <td class="tableCell" id="d_class3"></td>
+                            <td class="tableCell" id="d_class4"></td>
+                            <td class="tableCell" id="d_class5"></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <div id="content-mobile">
+            <div class="content-mobile">
                 <table class="table table-bordered mixTable">
+                    <col width="55%"/>
+                    <col width="45%"/>
                     <tbody>
                         <tr>
                             <th class="tableCell">Names</th>
                             <th class="tableCell">Classes</th>
                         </tr>
                         <tr>
-                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" class="name0" required/></td>
-                            <td class="tableCell"><p class="class0"></p></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="m_name0" required/></td>
+                            <td class="tableCell" id="m_class0"></td>
                         </tr>
                         <tr>
-                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" class="name1" required/></td>
-                            <td class="tableCell"><p class="class1"></p></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="m_name1" required/></td>
+                            <td class="tableCell" id="m_class1"></td>
                         </tr>
                         <tr>
-                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" class="name2" required/></td>
-                            <td class="tableCell"><p class="class2"></p></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="m_name2" required/></td>
+                            <td class="tableCell" id="m_class2"></td>
                         </tr>
                         <tr>
-                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" class="name3" required/></td>
-                            <td class="tableCell"><p class="class3"></p></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="m_name3" required/></td>
+                            <td class="tableCell" id="m_class3"></td>
                         </tr>
                         <tr>
-                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" class="name4" required/></td>
-                            <td class="tableCell"><p class="class4"></p></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="m_name4" required/></td>
+                            <td class="tableCell" id="m_class4"></td>
                         </tr>
                         <tr>
-                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" class="name5" required/></td>
-                            <td class="tableCell"><p class="class5"></p></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="m_name5" required/></td>
+                            <td class="tableCell" id="m_class5"></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
 
-            <!--Submit Button-->
-            <button type="button" onclick="mix()" class="btn btn-lg btn-outline-primary btn-block" id="mixme_btn">Mix me!</button>
+            <!--Submit Buttons-->
+            <div class="content-desktop">
+                <button type="button" onclick="d_mix()" class="btn btn-lg btn-outline-primary btn-block" id="d_mixme_btn">Mix me!</button>
+            </div>
+
+            <div class="content-mobile">
+                <button type="button" onclick="m_mix()" class="btn btn-lg btn-outline-primary btn-block" id="m_mixme_btn">Mix me!</button>
+            </div>
 
 
             <!--Buttons-->
             <div class="row">
                 <div class="col-sm-6">
-                    <button type="button" onclick="openCopyModal()" class="btn btn-outline-primary btn-block" id="openCopyBox_btn">Open Copy Box »</button>
+                    <div class="content-desktop">
+                        <button type="button" onclick="d_openCopyModal()" class="btn btn-outline-primary btn-block" id="openCopyBox_btn">Open Copy Box »</button>
+                    </div>
+                    <div class="content-mobile">
+                        <button type="button" onclick="m_openCopyModal()" class="btn btn-outline-primary btn-block" id="openCopyBox_btn">Open Copy Box »</button>
+                    </div>
                 </div>
                 <div class="col-sm-6">
                     <button type="button" onclick="location.href='http://www.teamfortress.tv/44226/mixme-tf-not-a-real-domain';" class="btn btn-outline-primary btn-block" id="tftv_btn">teamfortress.tv Thread »</button>
@@ -206,10 +219,20 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <textarea id="copyText" cols="51" rows="10" readonly></textarea>
+                            <div class="content-desktop">
+                                <textarea id="d_copyText" cols="51" rows="10" readonly></textarea>
+                            </div>
+                            <div class="content-mobile">
+                                <textarea id="m_copyText" cols="31" rows="10" readonly></textarea>
+                            </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" onclick="copyToClipboard()" class="btn btn-primary">Copy</button>
+                            <div class="content-desktop">
+                                <button type="button" onclick="d_copyToClipboard()" class="btn btn-primary">Copy</button>
+                            </div>
+                            <div class="content-mobile">
+                                <button type="button" onclick="m_copyToClipboard()" class="btn btn-primary">Copy</button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -17,21 +17,21 @@
 }
 
 @media screen and (max-width:810px){
-    #content-desktop {
+    .content-desktop {
         display: none;
     }
 
-    #content-mobile {
+    .content-mobile {
         display: inline;
     }
 }
 
 @media screen and (min-width:811px){
-    #content-desktop {
+    .content-desktop {
         display: inline;
     }
 
-    #content-mobile {
+    .content-mobile {
         display: none;
     }
 }
