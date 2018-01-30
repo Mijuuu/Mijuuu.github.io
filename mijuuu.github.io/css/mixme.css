@@ -1,0 +1,33 @@
+.tableCell {
+    height: 60px;
+}
+
+.mixTable td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.mixTable th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media screen and (max-width:810px){
+    .content-desktop {
+        display: none;
+    }
+
+    .content-mobile {
+        display: inline;
+    }
+}
+
+@media screen and (min-width:811px){
+    .content-desktop {
+        display: inline;
+    }
+
+    .content-mobile {
+        display: none;
+    }
+}

@@ -1,0 +1,248 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>mixme.tf</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="mixmeicon.ico">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/mixme.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/mixme.js"></script>
+
+
+        <!--Implementation of Material Design for Bootstrap-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/popper.js@1.12.5/dist/umd/popper.js" integrity="sha384-KlVcf2tswD0JOTQnzU4uwqXcbAy57PvV48YUiLjqpk/MJ2wExQhg9tuozn5A1iVw" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/js/bootstrap-material-design.js" integrity="sha384-hC7RwS0Uz+TOt6rNG8GX0xYCJ2EydZt1HeElNwQqW+3udRol4XwyBfISrNDgQcGA" crossorigin="anonymous"></script>
+        <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+
+
+        <!--Navigationbar-->
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Miju's GitHub Page</a>
+                <ul class="navbar-nav mr-auto">
+                    <div class="row">
+                        <li class="nav-item" id="mixmetf_top_btn">
+                          <a class="nav-link" href="mixme.html">mixme.tf</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="mixmehl.html">mixmehl.tf</a>
+                        </li>
+                    </div>
+                </ul>
+                <span class="nav-item dropdown" id="link_dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Follow me
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="https://twitter.com/MijuLikesCats">Twitter</a>
+                        <a class="dropdown-item" href="http://steamcommunity.com/id/mijura">Steam</a>
+                        <a class="dropdown-item" href="https://github.com/Mijuuu">GitHub</a>
+                    </div>
+                </span>
+            </div>
+        </nav>
+
+
+        <!--Jumbotron-->
+        <div class="jumbotron">
+            <div class="container">
+                <h1>mixme.tf</h1>
+                <p class="lead">Enter the names of your players in the table below and hit 'MIX ME!' to randomly assign classes. Use the Copy Box to copy the names with their randomly assigned classes or download a screenshot of the table.</p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <button type="button" onclick="location.href='https://discord.gg/3RutU9c';" class="btn btn-lg btn-default btn-block" id="discord_btn">Find an enemy team »</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="button" onclick="location.href='https://serveme.tf/';" class="btn btn-lg btn-default btn-block" id="serveme_btn">Get a gameserver »</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Tables-->
+        <div class="container">
+            <div class="content-desktop">
+                <table class="table table-bordered mixTable">
+                    <tbody>
+                        <tr>
+                            <th class="tableCell">Names</th>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="d_name0" required/></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="d_name1" required/></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="d_name2" required/></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="d_name3" required/></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="d_name4" required/></td>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="d_name5" required/></td>
+                        </tr>
+                        <tr>
+                            <th class="tableCell">Classes</th>
+                            <td class="tableCell" id="d_class0"></td>
+                            <td class="tableCell" id="d_class1"></td>
+                            <td class="tableCell" id="d_class2"></td>
+                            <td class="tableCell" id="d_class3"></td>
+                            <td class="tableCell" id="d_class4"></td>
+                            <td class="tableCell" id="d_class5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-mobile">
+                <table class="table table-bordered mixTable">
+                    <col width="55%"/>
+                    <col width="45%"/>
+                    <tbody>
+                        <tr>
+                            <th class="tableCell">Names</th>
+                            <th class="tableCell">Classes</th>
+                        </tr>
+                        <tr>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="m_name0" required/></td>
+                            <td class="tableCell" id="m_class0"></td>
+                        </tr>
+                        <tr>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="m_name1" required/></td>
+                            <td class="tableCell" id="m_class1"></td>
+                        </tr>
+                        <tr>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="m_name2" required/></td>
+                            <td class="tableCell" id="m_class2"></td>
+                        </tr>
+                        <tr>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="m_name3" required/></td>
+                            <td class="tableCell" id="m_class3"></td>
+                        </tr>
+                        <tr>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="m_name4" required/></td>
+                            <td class="tableCell" id="m_class4"></td>
+                        </tr>
+                        <tr>
+                            <td class="tableCell"><input type="text" maxlength="20" class="form-control" placeholder="Enter name here" id="m_name5" required/></td>
+                            <td class="tableCell" id="m_class5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <!--Submit Buttons-->
+            <div class="content-desktop">
+                <button type="button" onclick="d_mix()" class="btn btn-lg btn-outline-primary btn-block" id="d_mixme_btn">Mix me!</button>
+            </div>
+
+            <div class="content-mobile">
+                <button type="button" onclick="m_mix()" class="btn btn-lg btn-outline-primary btn-block" id="m_mixme_btn">Mix me!</button>
+            </div>
+
+
+            <!--Buttons-->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="content-desktop">
+                        <button type="button" onclick="d_openCopyModal()" class="btn btn-outline-primary btn-block" id="openCopyBox_btn">Open Copy Box »</button>
+                    </div>
+                    <div class="content-mobile">
+                        <button type="button" onclick="m_openCopyModal()" class="btn btn-outline-primary btn-block" id="openCopyBox_btn">Open Copy Box »</button>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <button type="button" onclick="location.href='http://www.teamfortress.tv/44226/mixme-tf-not-a-real-domain';" class="btn btn-outline-primary btn-block" id="tftv_btn">teamfortress.tv Thread »</button>
+                </div>
+            </div>
+
+
+            <!--Modals-->
+            <div class="modal" id="tableNotFilledModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Alert</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Get the Table filled first.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="notAllNamesEnteredModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Alert</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Please make sure that all six names are entered.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="copyModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Copy Box</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="content-desktop">
+                                <textarea id="d_copyText" cols="51" rows="10" readonly></textarea>
+                            </div>
+                            <div class="content-mobile">
+                                <textarea id="m_copyText" cols="31" rows="10" readonly></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="content-desktop">
+                                <button type="button" onclick="d_copyToClipboard()" class="btn btn-primary">Copy</button>
+                            </div>
+                            <div class="content-mobile">
+                                <button type="button" onclick="m_copyToClipboard()" class="btn btn-primary">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--footnote-->
+            <hr>
+            <footer>
+                <small>by Henry 'Miju' Wulff</small>
+            </footer>
+        </div>
+    </body>
+</html>
